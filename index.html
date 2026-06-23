@@ -1,138 +1,200 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="横浜・山下公園近くの隠れ家Bar Vollmond。満月の夜に、大切な人と静かな時間を過ごすための架空店舗ブランドサイトです。">
+  <title>Vollmond | Hidden Bar in Yokohama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Vollmond Home">
+      <span class="brand-mark"></span>
+      <span>Vollmond</span>
+    </a>
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-        <!-- build:css -->
-        <link href="css/style.css" rel="stylesheet">
-        <!-- endbuild -->
-        <!-- jQuery読み込み -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-        <title>横浜山下公園の近くに佇む　隠れ家Bar Vollmond　落ち着いた雰囲気が魅力です</title>
-    </head>
-    <body>
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0">Vollmond</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    <a class="nav-link" href="menu.html">Menu</a>
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </nav>
-            </div>
-            </header>
-        </div>
+    <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
+      <a href="#home">Home</a>
+      <a href="#concept">Concept</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#information">Information</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <a class="hamburger" href="#cp_fullscreenmenu"></a>
-    <ul id="cp_fullscreenmenu">
-      <li><a href="menu.html">Menu</li>
-      <li><a href="infomation.html">Infomation</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="photo.html">Cocktail Photo</a></li>
-    </ul>
-
-    <div class="contents">
-        <div id="cp_fmcontent-1">
-        <h1>Menu</h1>
-        <p>Menu</p>
-        </div>
-        <div id="cp_fmcontent-2">
-        <h1>Infomation</h1>
-        <p>Infomation</p>
-        </div>
-        <div id="cp_fmcontent-3">
-        <h1>Contact</h1>
-        <p>Contact</p>
-        </div>
-        <div id="cp_fmcontent-4">
-        <h1>Cocktail Photo</h1>
-        <p>Cocktail Photo</p>
-        </div>
-    </div>
-
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/Top1syanpan.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>spend slowly time</h1>
-              <p>大切な人と、ゆっくりした時間を過ごす</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/Top.uisuki-.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>spaend relax time</h1>
-              <p>一人でも、くつろげる　そんな空間です</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/Top.kaunta-.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>spend originality time</h1>
-              <p>お客様に合った、オリジナルカクテルが楽しめます</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-      <div class="sp">
-        <p>山下公園の近くに佇むVollmondは、ドイツ語で"満月"という意味です。
-          満月には不思議な力があります。大切な人と過ごす時間を、ぜひVollmondでどうぞ。
+  <main>
+    <section class="hero" id="home" aria-label="Vollmond">
+      <div class="hero-bg" role="img" aria-label="暗いバーに置かれたカクテルと満月を思わせる光"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content fade-in is-visible">
+        <p class="eyebrow">Hidden Bar near Yamashita Park</p>
+        <h1>満月の夜に、<br>大切な人と、<br>静かな一杯を。</h1>
+        <p class="hero-lead">
+          横浜・山下公園のほど近く。喧騒から少し離れた隠れ家Bar「Vollmond」で、
+          ゆっくりとほどける大人の時間をお過ごしください。
         </p>
-      </div>
-    
-    <section id="location">
-        <div class="sp">
-          <div  class="location-info">
-            <h3 class="sub-title">Vollmond</h3>
-              <p><a name="access">
-                Address：神奈川県横浜市山下公園3‐3‐8<br>
-                Tell：050-1105-3939<br>
-                Open ：19時<br>
-                Close：27時(ラストオーダー26時)<br>
-                Card： Visa / Mastercard <br> American Express /Jcb
-              </p>
-          </div>
-          <div class="location-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.3861117637275!2d139.64545161447845!3d35.445234380249936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185ce32bb5dd39%3A0x3694edd31c9367d5!2z44CSMjMxLTAwMjMg56We5aWI5bed55yM5qiq5rWc5biC5Lit5Yy65bGx5LiL55S677yS77yXIOODl-ODreOCt-ODvOODieWxseS4i-WFrOWckuOCtuODu-OCv-ODr-ODvA!5e0!3m2!1sja!2sjp!4v1616276427697!5m2!1sja!2sjp" width="280" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
+        <div class="hero-info" aria-label="営業時間">
+          <span>Open 18:00 - 25:00</span>
+          <span>Closed on Monday</span>
         </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">Reserve a Seat</a>
+          <a class="button button-outline" href="#menu">View Menu</a>
+        </div>
+      </div>
     </section>
-    
-    <footer class="mt-auto text-white-50">
-     <p><small>&copy; 2021 Miyao.com</small></p>
-    </footer>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <section class="section concept" id="concept">
+      <div class="section-heading fade-in">
+        <p class="section-label">Concept</p>
+        <h2>満月の夜に、大切な人と静かな時間を過ごす</h2>
+      </div>
+      <div class="concept-layout">
+        <div class="concept-copy fade-in">
+          <p>
+            Vollmondは、ドイツ語で「満月」を意味します。月明かりが水面に揺れる横浜の夜に、
+            大切な人と肩の力を抜いて過ごせる場所をイメージした、架空の隠れ家Barです。
+          </p>
+          <p>
+            深いネイビーと黒を基調に、グラスに差すゴールドの光を添えて。
+            会話の余白、香りの余韻、ゆっくり流れる時間を楽しむためのブランドサイトとして設計しました。
+          </p>
+        </div>
+        <div class="concept-note fade-in">
+          <span>01</span>
+          <strong>Quiet Luxury</strong>
+          <p>派手さよりも、静けさと余白。月の満ちる夜に似合う上質な空気を大切にしています。</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <section class="section menu" id="menu">
+      <div class="section-heading fade-in">
+        <p class="section-label">Menu</p>
+        <h2>香りと余韻を楽しむ一杯</h2>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card fade-in">
+          <img src="assets/images/gallery-whisky.png" alt="琥珀色のウイスキーカクテル">
+          <div>
+            <h3>Whisky</h3>
+            <p>シングルモルトを中心に、静かな夜に寄り添う深い味わいをセレクト。</p>
+            <span>from ¥1,200</span>
+          </div>
+        </article>
+        <article class="menu-card fade-in">
+          <img src="assets/images/gallery-cocktail.png" alt="月明かりを思わせるカクテル">
+          <div>
+            <h3>Cocktail</h3>
+            <p>季節の果実やハーブを使った、Vollmondらしい繊細なカクテル。</p>
+            <span>from ¥1,100</span>
+          </div>
+        </article>
+        <article class="menu-card fade-in">
+          <img src="assets/images/gallery-wine.png" alt="深い赤色のワイングラス">
+          <div>
+            <h3>Wine</h3>
+            <p>グラスで気軽に楽しめる赤・白・スパークリングを日替わりでご用意。</p>
+            <span>from ¥1,000</span>
+          </div>
+        </article>
+        <article class="menu-card fade-in">
+          <img src="assets/images/gallery-nonalcoholic.png" alt="ハーブを添えたノンアルコールカクテル">
+          <div>
+            <h3>Non-alcoholic</h3>
+            <p>お酒を控えたい夜にも満足できる、香り高いモクテル。</p>
+            <span>from ¥900</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    -->
-  </body>
+    <section class="section gallery" id="gallery">
+      <div class="section-heading fade-in">
+        <p class="section-label">Gallery</p>
+        <h2>月明かりに映えるグラス</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item tall fade-in">
+          <img src="assets/images/gallery-whisky.png" alt="ウイスキーのオールドファッションド">
+          <figcaption>Old Fashioned</figcaption>
+        </figure>
+        <figure class="gallery-item fade-in">
+          <img src="assets/images/gallery-cocktail.png" alt="透明感のあるシグネチャーカクテル">
+          <figcaption>Signature Cocktail</figcaption>
+        </figure>
+        <figure class="gallery-item fade-in">
+          <img src="assets/images/gallery-wine.png" alt="赤ワインのグラス">
+          <figcaption>Selected Wine</figcaption>
+        </figure>
+        <figure class="gallery-item wide fade-in">
+          <img src="assets/images/gallery-nonalcoholic.png" alt="ハーブを使ったノンアルコールカクテル">
+          <figcaption>Botanical Mocktail</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section information" id="information">
+      <div class="section-heading fade-in">
+        <p class="section-label">Information</p>
+        <h2>店舗情報</h2>
+      </div>
+      <div class="info-panel fade-in">
+        <dl>
+          <div>
+            <dt>Address</dt>
+            <dd>神奈川県横浜市中区山下町 12-3 Moonlight Bldg. 2F</dd>
+          </div>
+          <div>
+            <dt>Hours</dt>
+            <dd>18:00 - 25:00 / 月曜定休</dd>
+          </div>
+          <div>
+            <dt>Payment</dt>
+            <dd>Cash / Credit Card / Electronic Money</dd>
+          </div>
+          <div>
+            <dt>Access</dt>
+            <dd>みなとみらい線「元町・中華街」駅より徒歩5分。山下公園から徒歩3分。</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-inner fade-in">
+        <p class="section-label">Contact</p>
+        <h2>今夜の席を、静かに確保する。</h2>
+        <p>
+          ご予約・お問い合わせはお電話またはメールにて承ります。
+          記念日や少人数でのご利用もお気軽にご相談ください。
+        </p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="tel:045-000-0000">Call 045-000-0000</a>
+          <a class="button button-outline" href="mailto:reserve@example.com">Mail Reservation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Vollmond</p>
+    <small>&copy; 2026 Vollmond. Fictional portfolio website.</small>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="TOPへ戻る">Top</button>
+
+  <script src="script.js"></script>
+</body>
 </html>
