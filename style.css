@@ -13,11 +13,18 @@
   --font-ja: "Noto Serif JP", "Yu Mincho", serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background:
     radial-gradient(circle at top left, rgba(201, 164, 92, 0.13), transparent 32rem),
     linear-gradient(180deg, #05070d 0%, #0b1020 44%, #05070d 100%);
@@ -35,10 +42,61 @@ a {
   text-decoration: none;
 }
 
+.container,
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  max-width: 1140px;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.container-fluid {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
 .site-header {
   padding-block: 18px;
   background: linear-gradient(180deg, rgba(5, 7, 13, 0.92), rgba(5, 7, 13, 0));
   transition: background 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar > .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-collapse {
+  flex-basis: auto;
+  flex-grow: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar-toggler {
+  display: none;
 }
 
 .site-header.is-scrolled,
@@ -73,12 +131,6 @@ a {
   box-shadow: 0 0 28px rgba(226, 201, 133, 0.58);
 }
 
-.navbar-toggler {
-  border-color: var(--line);
-  border-radius: 999px;
-  padding: 0.55rem 0.65rem;
-}
-
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0.15rem rgba(201, 164, 92, 0.28);
 }
@@ -87,7 +139,7 @@ a {
   position: relative;
   color: rgba(245, 239, 228, 0.82);
   font-family: var(--font-en);
-  font-size: 1.02rem;
+  font-size: 0.98rem;
 }
 
 .navbar-dark .navbar-nav .nav-link::after {
@@ -116,7 +168,7 @@ a {
 .hero {
   position: relative;
   min-height: 100svh;
-  padding: 140px 0 80px;
+  padding: 112px 0 48px;
   overflow: hidden;
 }
 
@@ -142,6 +194,7 @@ a {
 .hero-content {
   position: relative;
   z-index: 1;
+  max-width: 760px;
 }
 
 .eyebrow,
@@ -161,9 +214,9 @@ h3 {
 }
 
 h1 {
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   color: #fff8ea;
-  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  font-size: clamp(2.8rem, 5.6vw, 4rem);
   font-weight: 600;
   letter-spacing: 0.02em;
   text-shadow: 0 20px 60px rgba(0, 0, 0, 0.42);
@@ -175,8 +228,16 @@ h1 {
   font-size: clamp(1rem, 1.6vw, 1.15rem);
 }
 
-.hero-info .badge {
+.hero-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.hero-info span {
   border: 1px solid var(--line);
+  border-radius: 999px;
   background: rgba(5, 7, 13, 0.38);
   color: var(--gold-light);
   font-family: var(--font-en);
@@ -185,11 +246,26 @@ h1 {
   padding: 0.72rem 1rem;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
   font-family: var(--font-en);
   letter-spacing: 0.08em;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.btn-lg {
+  min-height: 52px;
+  padding: 0.8rem 1.55rem;
+  font-size: 1rem;
 }
 
 .btn:hover,
@@ -452,6 +528,34 @@ h1 {
 }
 
 @media (max-width: 991.98px) {
+  .navbar > .container-fluid {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .navbar-toggler {
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.55rem 0.65rem;
+    background: transparent;
+  }
+
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+
+  .navbar-collapse:not(.show) {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
   .navbar-collapse {
     margin-top: 18px;
     padding: 18px 0 8px;
@@ -469,9 +573,14 @@ h1 {
 }
 
 @media (max-width: 767.98px) {
+  .container {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
   .hero {
     min-height: 92svh;
-    padding: 118px 0 64px;
+    padding: 108px 0 52px;
   }
 
   .hero-overlay {
@@ -505,6 +614,16 @@ h1 {
 
   .hero-lead {
     font-size: 0.95rem;
+  }
+
+  .hero-info,
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-info span,
+  .hero-actions .btn {
+    width: 100%;
   }
 
   .menu-card .card-img-top {
