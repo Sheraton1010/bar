@@ -1,26 +1,19 @@
 const header = document.querySelector(".site-header");
-const navToggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector(".global-nav");
+const nav = document.querySelector("#global-nav");
 const backToTop = document.querySelector(".back-to-top");
 const fadeTargets = document.querySelectorAll(".fade-in");
 
-const closeNav = () => {
-  navToggle.classList.remove("is-active");
-  navToggle.setAttribute("aria-expanded", "false");
-  nav.classList.remove("is-open");
-  document.body.classList.remove("nav-open");
-};
+nav.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (!window.bootstrap) {
+      return;
+    }
 
-navToggle.addEventListener("click", () => {
-  const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-  navToggle.classList.toggle("is-active", !isOpen);
-  navToggle.setAttribute("aria-expanded", String(!isOpen));
-  nav.classList.toggle("is-open", !isOpen);
-  document.body.classList.toggle("nav-open", !isOpen);
-});
-
-nav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", closeNav);
+    const collapse = bootstrap.Collapse.getInstance(nav);
+    if (collapse) {
+      collapse.hide();
+    }
+  });
 });
 
 const updateScrollUi = () => {

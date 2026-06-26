@@ -8,181 +8,224 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9Oer+R5sY3eL6K2Y5nIeK9tJ1yT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header" id="top">
-    <a class="brand" href="#home" aria-label="Vollmond Home">
-      <span class="brand-mark"></span>
-      <span>Vollmond</span>
-    </a>
-
-    <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
-      <a href="#home">Home</a>
-      <a href="#concept">Concept</a>
-      <a href="#menu">Menu</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#information">Information</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-header" id="top" aria-label="グローバルナビゲーション">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand brand" href="#home" aria-label="Vollmond Home">
+        <span class="brand-mark"></span>
+        <span>Vollmond</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-nav" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="global-nav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#concept">Concept</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#information">Information</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <main>
-    <section class="hero" id="home" aria-label="Vollmond">
+    <section class="hero d-flex align-items-center" id="home" aria-label="Vollmond">
       <div class="hero-bg" role="img" aria-label="暗いバーに置かれたカクテルと満月を思わせる光"></div>
       <div class="hero-overlay"></div>
-      <div class="hero-content fade-in is-visible">
-        <p class="eyebrow">Hidden Bar near Yamashita Park</p>
-        <h1>満月の夜に、<br>大切な人と、<br>静かな一杯を。</h1>
-        <p class="hero-lead">
-          横浜・山下公園のほど近く。喧騒から少し離れた隠れ家Bar「Vollmond」で、
-          ゆっくりとほどける大人の時間をお過ごしください。
-        </p>
-        <div class="hero-info" aria-label="営業時間">
-          <span>Open 18:00 - 25:00</span>
-          <span>Closed on Monday</span>
-        </div>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#contact">Reserve a Seat</a>
-          <a class="button button-outline" href="#menu">View Menu</a>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-12 col-lg-8 col-xl-7 hero-content fade-in is-visible">
+            <p class="eyebrow">Hidden Bar near Yamashita Park</p>
+            <h1>満月の夜に、<br>大切な人と、<br>静かな一杯を。</h1>
+            <p class="hero-lead">
+              横浜・山下公園のほど近く。喧騒から少し離れた隠れ家Bar「Vollmond」で、
+              ゆっくりとほどける大人の時間をお過ごしください。
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-2 gap-sm-3 my-4 hero-info" aria-label="営業時間">
+              <span class="badge rounded-pill">Open 18:00 - 25:00</span>
+              <span class="badge rounded-pill">Closed on Monday</span>
+            </div>
+            <div class="d-grid d-sm-flex gap-3 hero-actions">
+              <a class="btn btn-gold btn-lg" href="#contact">Reserve a Seat</a>
+              <a class="btn btn-outline-gold btn-lg" href="#menu">View Menu</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section concept" id="concept">
-      <div class="section-heading fade-in">
-        <p class="section-label">Concept</p>
-        <h2>満月の夜に、大切な人と静かな時間を過ごす</h2>
-      </div>
-      <div class="concept-layout">
-        <div class="concept-copy fade-in">
-          <p>
-            Vollmondは、ドイツ語で「満月」を意味します。月明かりが水面に揺れる横浜の夜に、
-            大切な人と肩の力を抜いて過ごせる場所をイメージした、架空の隠れ家Barです。
-          </p>
-          <p>
-            深いネイビーと黒を基調に、グラスに差すゴールドの光を添えて。
-            会話の余白、香りの余韻、ゆっくり流れる時間を楽しむためのブランドサイトとして設計しました。
-          </p>
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="section-label">Concept</p>
+          <h2>満月の夜に、大切な人と静かな時間を過ごす</h2>
         </div>
-        <div class="concept-note fade-in">
-          <span>01</span>
-          <strong>Quiet Luxury</strong>
-          <p>派手さよりも、静けさと余白。月の満ちる夜に似合う上質な空気を大切にしています。</p>
+        <div class="row g-4 g-lg-5 align-items-stretch">
+          <div class="col-12 col-lg-7 concept-copy fade-in">
+            <p>
+              Vollmondは、ドイツ語で「満月」を意味します。月明かりが水面に揺れる横浜の夜に、
+              大切な人と肩の力を抜いて過ごせる場所をイメージした、架空の隠れ家Barです。
+            </p>
+            <p>
+              深いネイビーと黒を基調に、グラスに差すゴールドの光を添えて。
+              会話の余白、香りの余韻、ゆっくり流れる時間を楽しむためのブランドサイトとして設計しました。
+            </p>
+          </div>
+          <div class="col-12 col-lg-5 fade-in">
+            <div class="card concept-card h-100">
+              <div class="card-body p-4 p-lg-5">
+                <span class="concept-number">01</span>
+                <h3 class="card-title">Quiet Luxury</h3>
+                <p class="card-text mb-0">派手さよりも、静けさと余白。月の満ちる夜に似合う上質な空気を大切にしています。</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section menu" id="menu">
-      <div class="section-heading fade-in">
-        <p class="section-label">Menu</p>
-        <h2>香りと余韻を楽しむ一杯</h2>
-      </div>
-      <div class="menu-grid">
-        <article class="menu-card fade-in">
-          <img src="assets/images/gallery-whisky.png" alt="琥珀色のウイスキーカクテル">
-          <div>
-            <h3>Whisky</h3>
-            <p>シングルモルトを中心に、静かな夜に寄り添う深い味わいをセレクト。</p>
-            <span>from ¥1,200</span>
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="section-label">Menu</p>
+          <h2>香りと余韻を楽しむ一杯</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-xl-3 fade-in">
+            <article class="card menu-card h-100">
+              <img src="assets/images/gallery-whisky.png" class="card-img-top" alt="琥珀色のウイスキーカクテル">
+              <div class="card-body">
+                <h3 class="card-title">Whisky</h3>
+                <p class="card-text">シングルモルトを中心に、静かな夜に寄り添う深い味わいをセレクト。</p>
+                <span class="price">from ¥1,200</span>
+              </div>
+            </article>
           </div>
-        </article>
-        <article class="menu-card fade-in">
-          <img src="assets/images/gallery-cocktail.png" alt="月明かりを思わせるカクテル">
-          <div>
-            <h3>Cocktail</h3>
-            <p>季節の果実やハーブを使った、Vollmondらしい繊細なカクテル。</p>
-            <span>from ¥1,100</span>
+          <div class="col-12 col-md-6 col-xl-3 fade-in">
+            <article class="card menu-card h-100">
+              <img src="assets/images/gallery-cocktail.png" class="card-img-top" alt="月明かりを思わせるカクテル">
+              <div class="card-body">
+                <h3 class="card-title">Cocktail</h3>
+                <p class="card-text">季節の果実やハーブを使った、Vollmondらしい繊細なカクテル。</p>
+                <span class="price">from ¥1,100</span>
+              </div>
+            </article>
           </div>
-        </article>
-        <article class="menu-card fade-in">
-          <img src="assets/images/gallery-wine.png" alt="深い赤色のワイングラス">
-          <div>
-            <h3>Wine</h3>
-            <p>グラスで気軽に楽しめる赤・白・スパークリングを日替わりでご用意。</p>
-            <span>from ¥1,000</span>
+          <div class="col-12 col-md-6 col-xl-3 fade-in">
+            <article class="card menu-card h-100">
+              <img src="assets/images/gallery-wine.png" class="card-img-top" alt="深い赤色のワイングラス">
+              <div class="card-body">
+                <h3 class="card-title">Wine</h3>
+                <p class="card-text">グラスで気軽に楽しめる赤・白・スパークリングを日替わりでご用意。</p>
+                <span class="price">from ¥1,000</span>
+              </div>
+            </article>
           </div>
-        </article>
-        <article class="menu-card fade-in">
-          <img src="assets/images/gallery-nonalcoholic.png" alt="ハーブを添えたノンアルコールカクテル">
-          <div>
-            <h3>Non-alcoholic</h3>
-            <p>お酒を控えたい夜にも満足できる、香り高いモクテル。</p>
-            <span>from ¥900</span>
+          <div class="col-12 col-md-6 col-xl-3 fade-in">
+            <article class="card menu-card h-100">
+              <img src="assets/images/gallery-nonalcoholic.png" class="card-img-top" alt="ハーブを添えたノンアルコールカクテル">
+              <div class="card-body">
+                <h3 class="card-title">Non-alcoholic</h3>
+                <p class="card-text">お酒を控えたい夜にも満足できる、香り高いモクテル。</p>
+                <span class="price">from ¥900</span>
+              </div>
+            </article>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
     <section class="section gallery" id="gallery">
-      <div class="section-heading fade-in">
-        <p class="section-label">Gallery</p>
-        <h2>月明かりに映えるグラス</h2>
-      </div>
-      <div class="gallery-grid">
-        <figure class="gallery-item tall fade-in">
-          <img src="assets/images/gallery-whisky.png" alt="ウイスキーのオールドファッションド">
-          <figcaption>Old Fashioned</figcaption>
-        </figure>
-        <figure class="gallery-item fade-in">
-          <img src="assets/images/gallery-cocktail.png" alt="透明感のあるシグネチャーカクテル">
-          <figcaption>Signature Cocktail</figcaption>
-        </figure>
-        <figure class="gallery-item fade-in">
-          <img src="assets/images/gallery-wine.png" alt="赤ワインのグラス">
-          <figcaption>Selected Wine</figcaption>
-        </figure>
-        <figure class="gallery-item wide fade-in">
-          <img src="assets/images/gallery-nonalcoholic.png" alt="ハーブを使ったノンアルコールカクテル">
-          <figcaption>Botanical Mocktail</figcaption>
-        </figure>
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="section-label">Gallery</p>
+          <h2>月明かりに映えるグラス</h2>
+        </div>
+        <div class="row g-3 gallery-row">
+          <div class="col-12 col-lg-6 fade-in">
+            <figure class="gallery-item gallery-item-large">
+              <img src="assets/images/gallery-whisky.png" alt="ウイスキーのオールドファッションド">
+              <figcaption>Old Fashioned</figcaption>
+            </figure>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="row g-3">
+              <div class="col-12 col-sm-6 fade-in">
+                <figure class="gallery-item">
+                  <img src="assets/images/gallery-cocktail.png" alt="透明感のあるシグネチャーカクテル">
+                  <figcaption>Signature Cocktail</figcaption>
+                </figure>
+              </div>
+              <div class="col-12 col-sm-6 fade-in">
+                <figure class="gallery-item">
+                  <img src="assets/images/gallery-wine.png" alt="赤ワインのグラス">
+                  <figcaption>Selected Wine</figcaption>
+                </figure>
+              </div>
+              <div class="col-12 fade-in">
+                <figure class="gallery-item gallery-item-wide">
+                  <img src="assets/images/gallery-nonalcoholic.png" alt="ハーブを使ったノンアルコールカクテル">
+                  <figcaption>Botanical Mocktail</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section information" id="information">
-      <div class="section-heading fade-in">
-        <p class="section-label">Information</p>
-        <h2>店舗情報</h2>
-      </div>
-      <div class="info-panel fade-in">
-        <dl>
-          <div>
-            <dt>Address</dt>
-            <dd>神奈川県横浜市中区山下町 12-3 Moonlight Bldg. 2F</dd>
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="section-label">Information</p>
+          <h2>店舗情報</h2>
+        </div>
+        <div class="card info-panel fade-in">
+          <div class="card-body p-0">
+            <dl class="row g-0 mb-0">
+              <div class="col-12 col-md-6 info-item">
+                <dt>Address</dt>
+                <dd>神奈川県横浜市中区山下町 12-3 Moonlight Bldg. 2F</dd>
+              </div>
+              <div class="col-12 col-md-6 info-item">
+                <dt>Hours</dt>
+                <dd>18:00 - 25:00 / 月曜定休</dd>
+              </div>
+              <div class="col-12 col-md-6 info-item">
+                <dt>Payment</dt>
+                <dd>Cash / Credit Card / Electronic Money</dd>
+              </div>
+              <div class="col-12 col-md-6 info-item">
+                <dt>Access</dt>
+                <dd>みなとみらい線「元町・中華街」駅より徒歩5分。山下公園から徒歩3分。</dd>
+              </div>
+            </dl>
           </div>
-          <div>
-            <dt>Hours</dt>
-            <dd>18:00 - 25:00 / 月曜定休</dd>
-          </div>
-          <div>
-            <dt>Payment</dt>
-            <dd>Cash / Credit Card / Electronic Money</dd>
-          </div>
-          <div>
-            <dt>Access</dt>
-            <dd>みなとみらい線「元町・中華街」駅より徒歩5分。山下公園から徒歩3分。</dd>
-          </div>
-        </dl>
+        </div>
       </div>
     </section>
 
     <section class="section contact" id="contact">
-      <div class="contact-inner fade-in">
-        <p class="section-label">Contact</p>
-        <h2>今夜の席を、静かに確保する。</h2>
-        <p>
-          ご予約・お問い合わせはお電話またはメールにて承ります。
-          記念日や少人数でのご利用もお気軽にご相談ください。
-        </p>
-        <div class="contact-actions">
-          <a class="button button-primary" href="tel:045-000-0000">Call 045-000-0000</a>
-          <a class="button button-outline" href="mailto:reserve@example.com">Mail Reservation</a>
+      <div class="container">
+        <div class="card contact-card fade-in">
+          <div class="card-body p-4 p-lg-5 text-center">
+            <p class="section-label">Contact</p>
+            <h2>今夜の席を、静かに確保する。</h2>
+            <p class="contact-lead">
+              ご予約・お問い合わせはお電話またはメールにて承ります。
+              記念日や少人数でのご利用もお気軽にご相談ください。
+            </p>
+            <div class="d-grid d-sm-flex justify-content-sm-center gap-3 mt-4">
+              <a class="btn btn-gold btn-lg" href="tel:045-000-0000">Call 045-000-0000</a>
+              <a class="btn btn-outline-gold btn-lg" href="mailto:reserve@example.com">Mail Reservation</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -195,6 +238,7 @@
 
   <button class="back-to-top" type="button" aria-label="TOPへ戻る">Top</button>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 </html>
