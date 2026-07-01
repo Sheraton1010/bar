@@ -45,3 +45,15 @@ const observer = new IntersectionObserver(
 );
 
 fadeTargets.forEach((target) => observer.observe(target));
+
+requestAnimationFrame(() => {
+  fadeTargets.forEach((target) => {
+    const rect = target.getBoundingClientRect();
+    const isOnScreen = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (isOnScreen) {
+      target.classList.add("is-visible");
+      observer.unobserve(target);
+    }
+  });
+});
